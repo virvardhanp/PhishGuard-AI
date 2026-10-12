@@ -467,7 +467,7 @@ async function analyzeURL() {
     try {
         // SEND URL TO BACKEND
         const response = await fetch(
-            "http://localhost:5000/api/analyze",
+            "https://phishguard-ai-f2z0.onrender.com/api/analyze",
             {
                 method: "POST",
                 headers: {
