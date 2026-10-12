@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PhishGuard AI - Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="logo">🛡️ PhishGuard AI</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#scanner">URL Scanner</a>
+            <a href="index.html#history">Scan History</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+    </nav>
+
+    <!-- DASHBOARD HEADER -->
+    <section class="dashboard-section">
+
+        <div class="dashboard-heading">
+            <h1>Security Dashboard</h1>
+
+            <p>
+                Monitor your URL scanning activity and security results.
+            </p>
+        </div>
+
+        <!-- STATISTICS CARDS -->
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+                <h3>Total Scans</h3>
+                <h2 id="totalScans">0</h2>
+                <p>Total URLs analyzed</p>
+            </div>
+
+            <div class="dashboard-card high-card">
+                <h3>High Risk</h3>
+                <h2 id="highRisk">0</h2>
+                <p>High-risk results</p>
+            </div>
+
+            <div class="dashboard-card medium-card">
+                <h3>Medium Risk</h3>
+                <h2 id="mediumRisk">0</h2>
+                <p>Medium-risk results</p>
+            </div>
+
+            <div class="dashboard-card low-card">
+                <h3>Low Risk</h3>
+                <h2 id="lowRisk">0</h2>
+                <p>Low-risk results</p>
+            </div>
+
+        </div>
+
+        <!-- RISK DISTRIBUTION -->
+        <div class="dashboard-panel">
+
+            <h2>Risk Distribution</h2>
+
+            <div class="risk-bar-container">
+
+                <div class="risk-bar">
+                    <span>High Risk</span>
+
+                    <div class="progress-background">
+                        <div id="highBar" class="progress-fill high-fill"></div>
+                    </div>
+
+                    <span id="highPercent">0%</span>
+                </div>
+
+                <div class="risk-bar">
+                    <span>Medium Risk</span>
+
+                    <div class="progress-background">
+                        <div id="mediumBar" class="progress-fill medium-fill"></div>
+                    </div>
+
+                    <span id="mediumPercent">0%</span>
+                </div>
+
+                <div class="risk-bar">
+                    <span>Low Risk</span>
+
+                    <div class="progress-background">
+                        <div id="lowBar" class="progress-fill low-fill"></div>
+                    </div>
+
+                    <span id="lowPercent">0%</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RECENT SCANS -->
+        <div class="dashboard-panel">
+
+            <h2>Recent Scans</h2>
+
+            <div id="recentScans">
+                <p>No scans available yet.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 PhishGuard AI | AI-Powered Phishing Detection</p>
+    </footer>
+
+    <!-- DASHBOARD JAVASCRIPT -->
+    <script src="dashboard.js"></script>
+
+</body>
+</html>
